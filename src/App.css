@@ -15,11 +15,13 @@ body {
   font-weight: 400;
   background: #f9f9f9;
 }
-ul{
+
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -29,10 +31,15 @@ ul{
 .orange-text {
   color: #f7931e !important;
 }
+
 .yellow-text {
   color: #FFAE42 !important;
 }
-.gray_text{color:#083654 !important;}
+
+.gray_text {
+  color: #083654 !important;
+}
+
 .white-text {
   color: #fff !important;
 }
@@ -40,17 +47,20 @@ ul{
 .blue-text {
   color: #006cc9 !important;
 }
-.yellow-text{
+
+.yellow-text {
   color: #ffb100 !important;
 }
 
 .black-text {
   color: #000000 !important;
 }
+
 .red-text {
   color: #f72f1e !important;
 }
-.green-text{
+
+.green-text {
   color: #1FC900 !important;
 }
 
@@ -63,7 +73,8 @@ ul{
   padding: 10px 24px 11px;
   margin-left: 10px;
 }
-.border-rounded{
+
+.border-rounded {
   border-radius: 40px !important;
 }
 
@@ -108,30 +119,22 @@ ul{
   margin: 0;
 }
 
-/* autosuggest */
-.autosuggest-wrap .MuiInputBase-input{
-  height: 43px;
-  padding: 0 14px;
-}
-.autosuggest-wrap .MuiInput-underline:before,
-.autosuggest-wrap .MuiInput-underline:after {
-  display: none;
-}
-
 .sup {
   position: relative;
   bottom: 1ex;
   font-size: 80%;
 }
 
-.mandatory-flied{
+.mandatory-flied {
   margin-left: 2px;
   color: #ed1b00;
   line-height: 12px;
   font-size: 14px;
   vertical-align: middle;
 }
-label.error, .MuiFormHelperText-root {
+
+label.error,
+.MuiFormHelperText-root {
   margin: 4px 0 0 0 !important;
   font-size: 11px !important;
   line-height: 12px !important;
@@ -142,6 +145,7 @@ label.error, .MuiFormHelperText-root {
   top: 100%;
   z-index: 9;
 }
+
 /* orientation css */
 
 .orientation-wrap {
@@ -193,136 +197,158 @@ label.error, .MuiFormHelperText-root {
 
 
 .custom-date-picker.MuiFormControl-root {
-    margin: 0;
-    width: 100%;
+  margin: 0;
+  width: 100%;
 }
 
 .custom-date-picker .MuiInput-root {
-    height: 47px;
-    border-radius: 4px;
-    border: solid 2px #e5ebf0;
-    background-color: #ffffff;
-    padding: 0 3px 0 17px;
-    margin: 0;
+  height: 47px;
+  border-radius: 4px;
+  border: solid 2px #e5ebf0;
+  background-color: #ffffff;
+  padding: 0 3px 0 17px;
+  margin: 0;
 }
 
 .custom-date-picker .MuiInputBase-input {
-    color: #083654;
-    font-size: 14px;
+  color: #083654;
+  font-size: 14px;
 }
 
 .custom-date-picker .MuiIconButton-root {
-    color: rgba(0, 108, 201, 0.8);
+  color: rgba(0, 108, 201, 0.8);
 }
 
 .custom-date-picker .MuiInputBase-input.Mui-disabled {
-    color: rgba(172, 182, 192, 0.7);
+  color: rgba(172, 182, 192, 0.7);
 }
 
 .custom-date-picker .MuiInput-underline:before,
 .custom-date-picker .MuiInput-underline:after {
-    display: none;
+  display: none;
 }
 
 .MuiPickersToolbar-toolbar {
-    background: #f7931e;
-    background: -webkit-gradient(linear, left top, right top, from(#f7931e), to(#de5811));
-    background: -webkit-linear-gradient(left, #f7931e, #de5811);
-    background: linear-gradient(90deg, #f7931e, #de5811);
+  background: #f7931e;
+  background: -webkit-gradient(linear, left top, right top, from(#f7931e), to(#de5811));
+  background: -webkit-linear-gradient(left, #f7931e, #de5811);
+  background: linear-gradient(90deg, #f7931e, #de5811);
 }
 
 .MuiPickersDay-daySelected {
-    background: #f7931e;
-    background: -webkit-gradient(linear, left top, right top, from(#f7931e), to(#de5811));
-    background: -webkit-linear-gradient(left, #f7931e, #de5811);
-    background: linear-gradient(90deg, #f7931e, #de5811);
+  background: #f7931e;
+  background: -webkit-gradient(linear, left top, right top, from(#f7931e), to(#de5811));
+  background: -webkit-linear-gradient(left, #f7931e, #de5811);
+  background: linear-gradient(90deg, #f7931e, #de5811);
 }
 
 /* .custom-date-picker .MuiInputLabel-root data-shrink */
 
-.custom-date-picker .MuiInputLabel-root  {
-    font-size: 13px;
-    line-height: 1.15;
-    color: #797979;
-    margin-bottom: 13px;
-    display: inline-block;
-    position: relative;
-    transform: inherit;
-};
+.custom-date-picker .MuiInputLabel-root {
+  font-size: 13px;
+  line-height: 1.15;
+  color: #797979;
+  margin-bottom: 13px;
+  display: inline-block;
+  position: relative;
+  transform: inherit;
+}
 
-.custom-date-picker label + .MuiInput-formControl {
-    margin: 0;
+;
+
+.custom-date-picker label+.MuiInput-formControl {
+  margin: 0;
 }
 
 
 @media (max-width: 767px) {
-    .main-content {
-      margin-left: 0;
-      width: calc(100% - 0px);
-    }
-    body{
-      background: #f9f9f9;
-    }
-    .pl-0 {
-      padding-left: 15px !important;
-    }
-    .pr-0{
-      padding-right: 15px !important;
-    }
-    .dispatch-card-wrapper {
-      padding: 0 15px 15px;
-    }
-    .action-btn-wrap{
-      display: block;
-    }
-    .action-btn-wrap .btn-detail {
-      margin-left: 0 !important;
+  .main-content {
+    margin-left: 0;
+    width: calc(100% - 0px);
   }
+
+  body {
+    background: #f9f9f9;
+  }
+
+  .pl-0 {
+    padding-left: 15px !important;
+  }
+
+  .pr-0 {
+    padding-right: 15px !important;
+  }
+
+  .dispatch-card-wrapper {
+    padding: 0 15px 15px;
+  }
+
+  .action-btn-wrap {
+    display: block;
+  }
+
+  .action-btn-wrap .btn-detail {
+    margin-left: 0 !important;
+  }
+
   /* Not remove CSS  user for agn receive mobile card button*/
-  .receive-btn{
+  .receive-btn {
     width: 100%;
   }
-  .mobile-btn{
+
+  .mobile-btn {
     flex-grow: 1;
   }
-  .ml-15{
+
+  .ml-15 {
     margin-left: 15px;
   }
-  .divider-bottom{
+
+  .divider-bottom {
     border-bottom: none;
     margin: 0;
   }
+
   .info-wrap {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 
-  .center-btn{
-      justify-content:'center' !important
+  .center-btn {
+    justify-content: 'center' !important
   }
 
-  .main-page{padding-top: 48px;}
-  .upload-btn-wrap .MuiButton-label{
+  .main-page {
+    padding-top: 48px;
+  }
+
+  .upload-btn-wrap .MuiButton-label {
     width: 88%;
     overflow: hidden;
   }
+
   .menuItemDiv {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
+
   #wrapp-text {
     white-space: inherit !important;
   }
-  .word-wrap{
+
+  .word-wrap {
     word-break: break-word;
   }
-  .no-gutters-mob{
+
+  .no-gutters-mob {
     margin: 0;
   }
-  .no-gutters-mob>.col, .no-gutters-mob>[class*=col-] {
+
+  .no-gutters-mob>.col,
+  .no-gutters-mob>[class*=col-] {
     padding-right: 0;
     padding-left: 0;
-}
+  }
 }
 
 @media screen and (orientation: landscape) {
@@ -330,14 +356,19 @@ label.error, .MuiFormHelperText-root {
     width: 100%;
   }
 }
-.mt-10{margin-top: 15px;}
-.checkbox-warp .MuiCheckbox-colorSecondary.Mui-checked{
+
+.mt-10 {
+  margin-top: 15px;
+}
+
+.checkbox-warp .MuiCheckbox-colorSecondary.Mui-checked {
   color: hsl(32, 93%, 54%);
 }
+
 /* .checkbox-orange.MuiCheckbox-colorSecondary.Mui-checked{
   color: hsl(32, 93%, 54%) !important;
 } */
 .custom-checkbox.MuiCheckbox-colorSecondary.Mui-checked,
-.custom-checkbox.MuiCheckbox-colorPrimary.Mui-checked svg{
+.custom-checkbox.MuiCheckbox-colorPrimary.Mui-checked svg {
   color: #f7931e !important;
 }

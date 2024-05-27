@@ -10,7 +10,7 @@ declare global {
 }
 
 
-export default function configureStore() {
+export default function configureReduxStore() {
     const middlewares = [thunkMiddleware];
     const middleWareEnhancer = applyMiddleware(...middlewares);
     // eslint-disable-next-line no-underscore-dangle

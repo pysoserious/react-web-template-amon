@@ -1,10 +1,8 @@
 import { Theme } from '@mui/material/styles';
 import { createStyles, makeStyles, useTheme } from '@mui/styles';
 import React, { CSSProperties, useEffect, useState } from 'react';
-import Select, { createFilter } from 'react-select';
-import { components } from 'react-select/';
+import Select, { createFilter, components, SingleValueProps } from 'react-select';
 import { OptionProps } from 'react-select/src/components/Option';
-import { SingleValueProps } from 'react-select/src/components/SingleValue';
 import { ValueType } from 'react-select/src/types';
 import { OptionType } from './widgetsInterfaces';
 
@@ -52,8 +50,8 @@ interface AutoCompleteProps {
     error?: string,
     isLoading?: boolean
     onChange: Function,
-    options: OptionType[] | undefined,
-    value: ValueType<OptionType> | undefined
+    options: OptionType[],
+    value: ValueType<OptionType>
     icon?: any,
     renderOption?: any,
     renderValueHolder?: any,
@@ -66,7 +64,7 @@ interface AutoCompleteProps {
 export default function AutoComplete(props: AutoCompleteProps) {
     const classes = useStyles();
     const theme = useTheme();
-    const [options, setOptions] = useState<any>();
+    const [options, setOptions] = useState<OptionType[]>([]);
     useEffect(() => {
         if (props.options && props.options.length <= 10) {
             setOptions(props.options)
@@ -90,19 +88,19 @@ export default function AutoComplete(props: AutoCompleteProps) {
     };
 
 
-    const customOption = (optionProps: OptionProps<OptionType>) => {
+    const customOption: any = (optionProps: OptionProps<OptionType>) => {
         return (
             <Option {...optionProps}>
-                {(props.showCustomView && props.renderOption && props.renderOption(optionProps.data)) || optionProps.data.label}
+                {/* {(props.showCustomView && props.renderOption && props.renderOption(optionProps.data)) || optionProps.data.label} */}
             </Option>
         );
     }
 
 
-    const customSingleValue = (valueProps: SingleValueProps<OptionType>) => {
+    const customSingleValue: any = (valueProps: SingleValueProps<OptionType>) => {
         return (
             <SingleValue {...valueProps}>
-                {(props.showCustomView && props.renderValueHolder && props.renderValueHolder(valueProps)) || valueProps.children}
+                {/* {(props.showCustomView && props.renderValueHolder && props.renderValueHolder(valueProps)) || valueProps.children} */}
             </SingleValue>
         );
     }
