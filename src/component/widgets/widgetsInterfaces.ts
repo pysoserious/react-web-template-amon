@@ -1,5 +1,5 @@
 export interface OptionType {
-    label: string;
-    value: string;
-    data?: any
+    readonly value: string;
+    readonly label: string;
+    readonly data?: any
 }

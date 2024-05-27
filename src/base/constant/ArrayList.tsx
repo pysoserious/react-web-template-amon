@@ -1,6 +1,6 @@
-import { AcUnit } from '@material-ui/icons';
 import React from 'react';
 import * as Path from "./RoutePath";
+import { AcUnit } from '@mui/icons-material';
 
 export const menuList = [
     {

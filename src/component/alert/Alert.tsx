@@ -25,15 +25,14 @@ export const AlertBox = () => {
     }));
 
     // /*eslint no-unused-vars: "warn"*/
-    useSelector((state: any) =>
-        state.appReducer.showAlert, shallowEqual
+    const { showAlert, alertMessage } = useSelector((state: any) =>
+        state.appReducer, shallowEqual
     )
     const store = useStore();
-    const props = store.getState().appReducer;
     const classes = useStyles();
     return (
         <Snackbar
-            open={props.showAlert && props.alertMessage && props.alertMessage !== ""}
+            open={showAlert && alertMessage && alertMessage !== ""}
             className="snackbar-wrapper"
             anchorOrigin={{
                 horizontal: 'center',
@@ -41,7 +40,7 @@ export const AlertBox = () => {
             }}
             message={
                 <span id="client-snackbar" className={classes.message}>
-                    {props.alertMessage}
+                    {alertMessage}
                 </span>
             }
             autoHideDuration={3000}

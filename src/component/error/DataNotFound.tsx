@@ -6,7 +6,7 @@ interface NotFoundProps {
     message?: string,
 }
 
-function DataNotFound(props: NotFoundProps) {
+function DataNotFound(props: NotFoundProps): any {
     return (
         <div className="not-found data-not-found text-center">
             <div className="ContWrap">

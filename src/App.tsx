@@ -1,17 +1,18 @@
-import DateAdapter from '@mui/lab/AdapterMoment';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
 import AppContainer from './AppContainer';
-import { ErrorBoundary } from './component/error/ErrorBoundary';
-import configureStore from './redux/store/Store';
+import ErrorBoundary from './component/error/ErrorBoundary';
+import configureReduxStore from './redux/store/Store';
 
 function App() {
-  const store = configureStore();
+  const store = configureReduxStore();
   const [currentOrientation, setCurrentOrientation] = React.useState<any>("portrait");
   function doOnOrientationChange() {
-    switch (window.orientation) {
+    let angle = window.screen.orientation.angle;
+    switch (angle) {
       case -90: case 90:
         setCurrentOrientation('landscape');
         break;
@@ -28,7 +29,7 @@ function App() {
 
   return (
     (currentOrientation === "portrait") ?
-      <LocalizationProvider dateAdapter={DateAdapter}>
+      <LocalizationProvider dateAdapter={AdapterMoment}>
         <Provider store={store} >
           <ErrorBoundary>
             <AppContainer />

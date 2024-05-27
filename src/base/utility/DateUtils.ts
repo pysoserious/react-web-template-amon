@@ -11,7 +11,7 @@ export const hyphenDate = "YYYY-MM-DD";
 
 export function convertDateToServerFormatFormat(date: Moment | any): string {
     try {
-        return new MomentUtils().date(date).toISOString(true);
+        return new MomentUtils().date(date)?.toISOString(true) || "";
     } catch (error) {
         return date && date.toISOString();
     }
@@ -19,7 +19,7 @@ export function convertDateToServerFormatFormat(date: Moment | any): string {
 
 export function convertFormatedDate(date: string | any, format: string): string {
     try {
-        return new MomentUtils().date(date).format(format).toString()
+        return new MomentUtils().date(date)?.format(format).toString() || ""
     } catch (error) {
         return date && date.toString();
     }

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as Path from './base/constant/RoutePath';
 import { AlertBox } from './component/alert/Alert';
 import DataNotFound from './component/error/DataNotFound';
@@ -8,7 +8,7 @@ import DashBoard from './pages/DashBoard';
 
 function AppContainer() {
   return (
-    <Router>
+    <BrowserRouter>
       <div id="wrapper" className="wrapper">
         <Suspense fallback={<Loader loading={true} />}>
           <AlertBox />
@@ -23,7 +23,7 @@ function AppContainer() {
           </div>
         </Suspense>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 export default AppContainer;
